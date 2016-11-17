@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_weight=".10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="100"
+            android:layout_weight="50"
+            android:background="@color/transparent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Powered by:"
+                android:id="@+id/poweredTextView"
+                android:layout_weight="40"
+                android:padding="10dp"
+                android:textColor="#a0FCC200"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView2"
+                android:layout_weight="50"
+                android:src="@drawable/themoviedblogo"
+
+                android:layout_gravity="left|center_vertical"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".90">
+vi
+
+        <Button
+            android:id="@+id/option_in_theaters"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/holo_green_light"
+            android:layout_weight="1.0"
+            android:text="In Theaters"></Button>
+
+        <Button
+            android:id="@+id/option_coming_soon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/holo_blue_light"
+            android:layout_weight="1.0"
+            android:text="Coming Soon"></Button>
+
+        <Button
+            android:id="@+id/option_movie_theaters"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/holo_red_light"
+            android:layout_weight="1.0"
+            android:text="Movie Theaters"
+            android:onClick="displayLocationsOnMap"></Button>
+    </LinearLayout>
+</LinearLayout>
